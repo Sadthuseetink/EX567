@@ -70,7 +70,7 @@
 //     }
 // }
 import React from 'react'
-// import { Players } from '../shared/ListOfPlayers'
+
 import { Players } from './shared/ListOfPlayers'
 export default function Player() {
   
