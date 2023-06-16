@@ -1,7 +1,8 @@
 .container{
   display: flex;
-  /* right: 0; */
+  
   justify-content: flex-end;
+  width: 50%;
 }
 .product-card{
   /* display: flex; */
@@ -187,6 +188,37 @@
 .brand-logo{
   margin-left: -650px;
 }
+.contact{
+  color: red;
+  padding-left: 200px;
+  text-align: center;
+  left: 20px;
+  
+}
+.modal-show{
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vmax;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 
+}.detail{
+  background-color: #61dafb;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+.detail1{
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.detail2{
+  font-size: 12px;
+  margin-left: 20px;
+}
 
 

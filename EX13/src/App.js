@@ -1,6 +1,7 @@
 import { Card, Col, Container, Row } from 'react-materialize';
 import { Route, Routes } from "react-router-dom";
 import './App.css';
+import About from './components/About';
 import Contact from './components/Contact';
 import Detail from './components/Detail';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<PlayersPresentation/>}></Route>
         <Route path='/Detail/:id' element={<Detail/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -1,33 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Card, CardTitle, Col, Container, Icon, Row } from 'react-materialize';
 import { useParams } from 'react-router-dom';
 import '../App.css';
 import { data } from "../components/share/ListOfPlayers";
+import ModalCase from './ModalCase';
 const Detail = () => {
     const userName = useParams();
+    const [isOpen, setIsOpen] = useState(false);
   const player = data.find(obj => {
     return obj.id == userName.id;
   });
    let cost = player.cost.toLocaleString();
 
   return (
-    <div className='container'>
-            <div className='product-card'>
-
-                <div className='product-tumb'>
-                    <span className='badge'>{player.name}</span>
-                    <img className='hinh1' src={`../${player.img}`} alt='' />
-
-                </div>
-                <div className='product-details'>
-                    <h2 >{player.club}</h2>
-                    <div className='product-price'>Market value: € {cost}</div>
-                    <p>{player.info}</p>
-                    <div className='product-bottom-details'></div>
-                </div>
-            </div>
+  <Container>
+  <Row>
+    <Col>
+    <Card
+      closeIcon={<Icon>close</Icon>}
+      header={<CardTitle image={`../${player.img}`}>{player.name}</CardTitle>}
+      // revealIcon={<Icon>more_vert</Icon>}
+    >
+      <a onClick={() => setIsOpen(true)} className='btn-floating halfway-fab waves-effect waves-light red'>
+      <Icon>ondemand_video</Icon>
+    </a>
+    <div className='detail'>
+        <div className='detail1'>{player.club}</div>
+        <div className='detail1'>Market value: €{cost}</div>
+        <div className='detail2'>{player.info}</div>
         </div>
-
-
+    </Card>
+    {isOpen && 
+      <ModalCase setIsOpen={setIsOpen} player={player}/>
+    }
+    </Col>
+  </Row>
+  </Container>
   )
 }
 

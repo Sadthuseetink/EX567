@@ -13,16 +13,16 @@ export default function Navigation() {
     id="mobile-nav" 
     menuIcon={<Icon>menu</Icon>}>
       <ul>
-        <li><Link to = '/'><Icon left>home</Icon> Home</Link></li>
-        <li to='/about'><Link to='/about'><Icon left>info_outline</Icon> About</Link></li>
+        <li><Link to = '/'><Icon left></Icon> Home</Link></li>
+        <li to='/about'><Link to='/about'><Icon left></Icon> About</Link></li>
         <li to='/news'>
           <Link to='/news'>
-            <Icon left>dvr</Icon>News
+            <Icon left></Icon>News
           </Link>
         </li>
         <li href='/contact'>
           <Link to='/contact'>
-            <Icon left>contacts</Icon> Contact
+            <Icon left></Icon> Contact
           </Link>
         </li>
       </ul>
