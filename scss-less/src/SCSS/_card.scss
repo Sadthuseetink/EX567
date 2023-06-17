@@ -1,12 +1,12 @@
-@import '/mixins'; //import for using the border-radius in _mixins.scss
-@import '/variables'; //import for using $spacing in _variables.scss
-.card {
+@import './mixins'; //using the border-radius in mmixins.scss
+@import './variables';//$spacing in variables.scss
+
+.card{
     background-color: white;
     width: 100%;
     overflow: hidden;
     margin: 2rem;
     box-shadow: 5px 5px 5px 5px #000;
-    @include border-radius(0.5rem); /* using the mixins function */
     img {
         width: 100%;
         background-size: cover;
